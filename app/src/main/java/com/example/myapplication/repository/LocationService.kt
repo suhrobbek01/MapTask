@@ -79,13 +79,13 @@ class LocationService : Service() {
 
                 appDatabase.locationDao().insertLocation(
                     Location(
-                        lat = lat.substring(0, 4),
+                        lat = lat,
                         code = 0,
-                        longit = long.substring(0, 4)
+                        longit = long
                     )
                 )
                 val updatedNotification = notification.setContentText(
-                    "Location (${lat.substring(0, 4)}, ${long.substring(0, 4)})"
+                    "Location (${lat}, ${long})"
                 )
 
                 notificationManager.notify(1, updatedNotification.build())
