@@ -5,6 +5,9 @@ plugins {
     id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
 }
 
+dependencies {
+    implementation("com.google.dagger:hilt-android-gradle-plugin:2.38.1")
+}
 android {
     namespace = "com.example.myapplication"
     compileSdk = 34
@@ -63,6 +66,4 @@ dependencies {
 
 // viewmodel extension
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
-
-
 }
